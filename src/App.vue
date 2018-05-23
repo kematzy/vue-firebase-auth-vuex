@@ -51,9 +51,11 @@
         </v-btn>
       </v-toolbar-items>
     </v-toolbar>
-    <main>
-      <router-view></router-view>
-    </main>
+
+    <v-content>
+      <router-view/>
+    </v-content>
+
   </v-app>
 </template>
 
