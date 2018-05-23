@@ -28,7 +28,7 @@
         @click.stop="sideNav = !sideNav"
         class=""></v-toolbar-side-icon>
       <v-toolbar-title>
-        <router-link to="/" tag="span" style="cursor: pointer">Firebase Auth Vuex</router-link>
+        <router-link to="/" tag="span" style="cursor: pointer;">Firebase Auth Vuex</router-link>
       </v-toolbar-title>
       <v-spacer></v-spacer>
       <v-toolbar-items class="hidden-xs-only">
@@ -99,5 +99,5 @@
 </script>
 
 <style lang="stylus">
-  @import './stylus/main'
+  @import './stylus/main';
 </style>
