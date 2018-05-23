@@ -2,6 +2,7 @@ import Vue from 'vue'
 import Router from 'vue-router'
 const Home = () => import('@/components/Home')
 const Profile = () => import('@/components/User/Profile')
+const Dashboard = () => import('@/components/User/Dashboard')
 const Signup = () => import('@/components/User/Signup')
 const Signin = () => import('@/components/User/Signin')
 import AuthGuard from './auth-guard'
@@ -14,6 +15,12 @@ export default new Router({
       path: '/',
       name: 'Home',
       component: Home
+    },
+    {
+      path: '/dashboard',
+      name: 'Dashboard',
+      component: Dashboard,
+      beforeEnter: AuthGuard
     },
     {
       path: '/profile',

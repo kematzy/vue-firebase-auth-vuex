@@ -79,6 +79,7 @@
         ]
         if (this.userIsAuthenticated) {
           menuItems = [
+            {icon: 'dashboard', title: 'Dashboard', link: '/dashboard'},
             {icon: 'person', title: 'Profile', link: '/profile'}
           ]
         }
