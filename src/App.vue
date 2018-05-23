@@ -24,8 +24,9 @@
 
     <v-toolbar app dark class="primary" clipped-left>
       <v-toolbar-side-icon
+        v-if="userIsAuthenticated"
         @click.stop="sideNav = !sideNav"
-        class="hidden-sm-and-up "></v-toolbar-side-icon>
+        class=""></v-toolbar-side-icon>
       <v-toolbar-title>
         <router-link to="/" tag="span" style="cursor: pointer">Firebase Auth Vuex</router-link>
       </v-toolbar-title>
