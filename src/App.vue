@@ -1,6 +1,6 @@
 <template>
   <v-app>
-    <v-navigation-drawer fixed temporary v-model="sideNav">
+    <v-navigation-drawer app :fixed="fixed" :clipped="clipped" v-model="sideNav">
       <v-list>
         <v-list-tile
           v-for="item in menuItems"
@@ -59,7 +59,12 @@
   export default {
     data () {
       return {
-        sideNav: false
+        // config: show nav drawer on page open; (default: false)
+        sideNav: false,
+        // config: output nav drawer under the app toolbar; (default: false)
+        clipped: true,
+        // config: fixed positioning of drawer; (default: false)
+        fixed: true
       }
     },
     computed: {
