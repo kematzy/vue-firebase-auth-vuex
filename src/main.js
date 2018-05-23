@@ -3,6 +3,7 @@
 import Vue from 'vue'
 import Vuetify from 'vuetify'
 const App = () => import('./App')
+import { environment } from './environments/environment'
 import * as firebase from 'firebase'
 import router from './router'
 import { store } from './store'
@@ -20,13 +21,7 @@ new Vue({
   template: '<App/>',
   components: { App },
   created () {
-    firebase.initializeApp({
-      apiKey: '',
-      authDomain: '',
-      databaseURL: '',
-      projectId: '',
-      storageBucket: ''
-    })
+    firebase.initializeApp(environment.firebaseConfig)
     firebase.auth().onAuthStateChanged((user) => {
       if (user) {
         this.$store.dispatch('autoSignIn', user)

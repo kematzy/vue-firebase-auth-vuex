@@ -12,3 +12,9 @@ yarn-error.log*
 *.njsproj
 *.sln
 *.swp
+
+# Exclude environments/ config files to prevent leaking of 
+# configurations, passwords, api keys, etc
+src/environments/environment.js
+src/environments/environment.dev.js
+src/environments/environment.js
